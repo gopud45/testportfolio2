@@ -1,1 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gopu Das - Web Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Contact Form Styling (Matching Theme) - Inline for completeness, consider moving to style.css */
+        .contacts-section .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
+        .contact-form {
+            margin-top: 2rem;
+            max-width: 600px; /* Slightly wider */
+            width: 100%;
+            padding: 3rem; /* Increased padding */
+            background-color: var(--secondary-bg);
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .contact-form h2 {
+            color: var(--text-primary);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem; /* Slightly larger heading */
+        }
+
+        .form-group {
+            margin-bottom: 2rem; /* Increased spacing */
+        }
+
+        .form-group label {
+            display: block;
+            color: var(--text-primary);
+            margin-bottom: 0.7rem; /* Increased spacing */
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem; /* Increased padding */
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            background-color: var(--primary-bg);
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 1rem;
+            box-sizing: border-box; /* Ensure padding doesn't affect width */
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px; /* Increased height */
+        }
+
+        .submit-button {
+            padding: 1rem 2.5rem; /* Increased padding */
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+            background-color: var(--accent-orange);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 1.1rem;
+            display: block; /* Make it a full-width button */
+            width: 100%;
+        }
+
+        .submit-button:hover {
+            background-color: var(--accent-orange-darker);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <div class="container">
+                <div class="logo">Gopu Das</div>
+                <nav>
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contacts">Contacts</a></li>
+                    </ul>
+                </nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="home" class="hero-section">
+                <div class="container hero-content-wrapper">
+                    <div class="hero-text">
+                        <h2>Hello<span class="orange-dot">.</span></h2>
+                        <h1>I'm Gopu Das</h1>
+                        <p class="subtitle">Web Developer</p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary">Got a project?</a>
+                            <a href="resume.pdf" class="btn btn-secondary">My resume</a>
+                        </div>
+                    </div>
+                    <div class="hero-image-container">
+                        <div class="image-background-accent"></div>
+                        <img src="dp.jpeg" alt="Gopu Das" class="profile-pic">
+                        <div class="abstract-shape abstract-shape-1">&lt;</div>
+                        <div class="abstract-shape abstract-shape-2">&gt;</div>
+                    </div>
+                </div>
+                <div class="skills-bar-container">
+                    <div class="container skills-bar">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Javascript</span>
+                        <span>React</span>
+                        <span>Github</span>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="services-section">
+                <div class="container">
+                    <div class="service-item">
+                        <div class="service-icon"><i class="fas fa-code"></i></div>
+                        <h3>Website Development</h3>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>App Development</h3>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon"><i class="fas fa-database"></i></div>
+                        <h3>Website Hosting</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="about-section">
+                <div class="container">
+                    <div class="about-content">
+                        <h2>About me</h2>
+                        <p>A 3rd-year BCA student at Inspiria Knowledge Campus, passionate about coding and innovation. I'm excited to connect with like-minded professionals and learn from their experiences. With a strong foundation in programming languages like Python, C, HTML, CSS, Java, and PHP, I'm looking forward to exploring opportunities in software development and technology.</p>
+                        <p><strong>Programming languages:</strong> Python, C, Java, PHP</p>
+                        <p><strong>Web development:</strong> HTML, CSS, Javascript, WordPress</p>
+                        <p>Strong problem-solving skills</p>
+                        <p>Eager to learn and adapt to new technologies</p>
+                        <p>Currently pursuing BCA at Inspiria Knowledge Campus (2022-2025)</p>
+                        <p>Feel free to reach out to me for networking, advice, or collaboration opportunities in the tech industry!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="projects-section">
+                <div class="container">
+                    <h2>Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-item-placeholder">Project 1 Coming Soon</div>
+                        <div class="project-item-placeholder">Project 2 Coming Soon</div>
+                        <div class="project-item-placeholder">Project 3 Coming Soon</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contacts" class="contacts-section">
+                <div class="container">
+                    <h2>Contacts</h2>
+                    <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">Feel free to reach out to me!</p>
+                    <form class="contact-form">
+                        <h2 style="display: none;">Contact Me</h2>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="7" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Gopu Das. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('header nav');
+        const navLinks = document.querySelectorAll('header nav a');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            menuToggle.querySelector('i').classList.toggle('fa-bars');
+            menuToggle.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Smooth scroll for navigation links
+        navLinks.forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+
+                        // Close mobile menu if open
+                        if (nav.classList.contains('active')) {
+                            nav.classList.remove('active');
+                            menuToggle.querySelector('i').classList.remove('fa-times');
+                            menuToggle.querySelector('i').classList.add('fa-bars');
+                        }
+
+                        // Update active class in navigation
+                        navLinks.forEach(link => link.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                }
+            });
+        });
+
+        // Update active class on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const scrollY = window.scrollY;
+
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - sectionHeight / 3) && scrollY < (sectionTop + sectionHeight - sectionHeight / 3)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                } else if (current === '' && link.getAttribute('href') === '#home') {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
