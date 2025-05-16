@@ -1,0 +1,459 @@
+/* Global Styles */
+:root {
+    --primary-bg: #0F172A; /* Dark blue/black from image */
+    --secondary-bg: #1E293B; /* Slightly lighter dark shade for cards/header */
+    --text-primary: #E2E8F0; /* Light grey/white text */
+    --text-secondary: #94A3B8; /* Lighter grey for subtitles/secondary text */
+    --accent-orange: #F97316; /* Bright Orange */
+    --accent-orange-darker: #EA580C;
+    --border-color: #334155;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.main-container {
+    overflow: hidden; /* For smoother transitions/animations if added later */
+}
+
+.container {
+    max-width: 1100px; /* Adjusted from image for better spacing */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-orange);
+}
+
+h1, h2, h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.8rem;
+}
+
+h1 { font-size: 3rem; font-weight: 700;}
+h2 { font-size: 2.2rem; font-weight: 600;}
+h3 { font-size: 1.3rem; font-weight: 500;}
+
+p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
+header {
+    background-color: var(--secondary-bg);
+    padding: 1.2rem 0; /* Adjusted padding */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem; /* Adjusted font size */
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav li {
+    margin-left: 1.2rem; /* Adjusted spacing */
+}
+
+header nav a {
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0; /* Added padding for better touch targets */
+    display: block; /* Make the whole area clickable */
+}
+
+header nav a:hover,
+header nav a.active {
+    color: var(--accent-orange);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--primary-bg);
+    padding: 6rem 0 0; /* Adjusted top padding */
+    position: relative;
+    overflow: hidden; /* For abstract shapes */
+}
+
+.hero-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem; /* Adjusted gap */
+    padding-bottom: 5rem; /* Adjusted bottom padding */
+}
+
+.hero-text {
+    flex-basis: 50%; /* Adjusted width */
+}
+
+.hero-text .orange-dot {
+    color: var(--accent-orange);
+}
+
+.hero-text h2 {
+    font-size: 2.5rem; /* Adjusted font size */
+    margin-bottom: 0.5rem; /* Adjusted margin */
+}
+
+.hero-text h1 {
+    font-size: 3.5rem; /* Adjusted font size */
+    line-height: 1.1;
+    margin-bottom: 0.8rem; /* Adjusted margin */
+}
+
+.hero-text .subtitle {
+    font-size: 1.6rem; /* Adjusted font size */
+    color: var(--text-secondary);
+    margin-top: -0.3rem; /* Adjusted margin */
+    margin-bottom: 1.8rem; /* Adjusted margin */
+}
+
+.btn {
+    padding: 0.9rem 2rem; /* Adjusted padding */
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    border: 1px solid transparent;
+    margin-right: 0.8rem; /* Adjusted margin */
+    font-size: 1rem; /* Adjusted font size */
+}
+
+.btn-primary {
+    background-color: var(--accent-orange);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-orange-darker);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--border-color);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+
+.hero-image-container {
+    flex-basis: 45%; /* Adjusted width */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-background-accent {
+    position: absolute;
+    width: 250px; /* Adjusted size */
+    height: 250px; /* Adjusted size */
+    background: linear-gradient(135deg, var(--accent-orange), #ffae70);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.profile-pic {
+    width: 220px; /* Adjusted size */
+    height: 220px; /* Adjusted size */
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    border: 5px solid var(--primary-bg); /* To create the cutout effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Added subtle shadow */
+}
+
+.abstract-shape {
+    position: absolute;
+    font-size: 3.5rem; /* Adjusted size */
+    color: var(--accent-orange);
+    opacity: 0.3;
+    z-index: 0;
+}
+.abstract-shape-1 { top: 15%; left: 5%; transform: rotate(-15deg); }
+.abstract-shape-2 { bottom: 15%; right: 5%; transform: rotate(15deg); }
+
+
+/* Skills Bar */
+.skills-bar-container {
+    background-color: var(--secondary-bg); /* Match the dark background of the image */
+    padding: 1.8rem 0; /* Adjusted padding */
+}
+.skills-bar {
+    display: flex;
+    justify-content: center; /* Center the skills */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem; /* Adjusted gap */
+}
+.skills-bar span {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.6rem 1rem; /* Adjusted padding */
+    background-color: #2C3E50; /* Darker background for skills pills */
+    border-radius: 20px; /* Pill shape */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Services Section */
+.services-section {
+    padding: 5rem 0; /* Adjusted padding */
+    background-color: var(--primary-bg); /* Consistent with overall bg */
+}
+
+.services-section .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem; /* Adjusted gap */
+    position: relative; /* For the line */
+}
+
+.services-section .container::before { /* The vertical line */
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 20px; /* Adjust as needed */
+    bottom: 20px; /* Adjust as needed */
+    width: 1px; /* Thinner line */
+    background-color: var(--border-color); /* Or accent-orange for emphasis */
+    display: block; /* Show on larger screens */
+    transform: translateX(-50%); /* Center the line */
+}
+
+
+.service-item {
+    display: flex;
+    flex-direction: column; /* Stack icon and text */
+    align-items: center;
+    padding: 1.5rem; /* Increased padding */
+    background-color: var(--secondary-bg); /* Card background */
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Card shadow */
+}
+
+.service-icon {
+    font-size: 2.5rem; /* Larger icon */
+    color: var(--accent-orange);
+    margin-bottom: 1rem;
+}
+.service-item h3 {
+    font-size: 1.4rem; /* Adjusted font size */
+    color: var(--text-primary);
+    font-weight: 500;
+    margin-bottom: 0.5rem; /* Added margin */
+}
+.service-item p {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+/* About Section */
+.about-section {
+    padding: 5rem 0; /* Adjusted padding */
+    background-color: var(--secondary-bg);
+}
+.about-content h2 {
+    text-align: left; /* Matches image */
+    margin-bottom: 1.8rem; /* Adjusted margin */
+    position: relative;
+    padding-bottom: 0.5rem; /* Space for the orange line */
+}
+/* Orange line below "About me" heading */
+.about-content h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-orange);
+    margin-top: 0.3rem;
+}
+.about-content p {
+    max-width: 750px; /* Slightly wider */
+    margin-bottom: 1.2rem; /* Adjusted margin */
+    color: var(--text-secondary);
+    line-height: 1.7; /* Improved readability */
+}
+.about-content p strong {
+    color: var(--text-primary); /* Highlight key terms */
+    font-weight: 600;
+}
+
+.stats {
+    display: flex;
+    gap: 3rem; /* Increased gap */
+    justify-content: flex-start; /* Align to left */
+    flex-wrap: wrap;
+    margin-top: 2rem; /* Added top margin */
+}
+.stat-item {
+    text-align: left;
+}
+.stat-number {
+    display: block;
+    font-size: 3rem; /* Larger number */
+    font-weight: 700;
+    color: var(--accent-orange);
+    margin-bottom: 0.2rem; /* Added margin */
+}
+.stat-label {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+
+/* Projects Section */
+.projects-section {
+    padding: 5rem 0; /* Adjusted padding */
+    background-color: var(--primary-bg);
+}
+.projects-section h2 {
+    text-align: left;
+    margin-bottom: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem; /* Space for the orange line */
+}
+/* Orange line below "Projects" heading */
+.projects-section h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-orange);
+    margin-top: 0.3rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly wider min width */
+    gap: 2.5rem; /* Adjusted gap */
+}
+.project-item-placeholder {
+    background-color: var(--secondary-bg);
+    padding: 3rem; /* Increased padding */
+    border-radius: 8px;
+    text-align: center;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--secondary-bg);
+    padding: 2.5rem 0; /* Adjusted padding */
+    text-align: center;
+    border-top: 1px solid var(--border-color);
+}
+footer p {
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem; /* Adjusted margin */
+    font-size: 0.9rem;
+}
+.social-links a {
+    color: var(--text-secondary);
+    font-size: 1.5rem; /* Larger icons */
+    margin: 0 0.8rem; /* Adjusted margin */
+    transition: color 0.3s ease;
+}
+.social-links a:hover {
+    color: var(--accent-orange);
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-content-wrapper {
+        flex-direction: column-reverse; /* Image on top on smaller screens */
+        text-align: center;
+    }
+    .hero-text {
+        flex-basis: 100%;
+        margin-bottom: 2rem; /* Added margin below text */
+    }
+    .hero-image-container {
+        margin-bottom: 3rem; /* Increased margin */
+        flex-basis: 80%; /* Take more width */
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .skills-bar {
+        justify-content: center;
+        gap: 0.8rem; /* Adjusted gap */
+    }
+    .services-section .container::before { display: none; } /* Hide line on smaller screens */
+    .about-content {
+        text-align: center;
+    }
+    .about-content h2 { text-align: center; }
+    .about-content p { margin-left: auto; margin-right: auto; }
+    .stats { justify-content: center; }
+    .stat-item { text-align: center; }
+    .projects-section h2 { text-align: center; }
+    .projects-section h2::after { margin-left: auto; margin-right: auto; }
+}
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.8rem; }
+    h2 { font-size: 2rem; }
+    .subtitle { font-size: 1.4rem; }
+    .btn { font-size: 0.9rem; padding: 0.7rem 1.5rem; margin: 0.5rem; }
+    .image-background-accent { width: 200px; height: 200px; }
+    .profile-pic { width: 180px; height: 1
